@@ -1,0 +1,145 @@
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.chat-title {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.status {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.chat-box {
+  border: 1px solid #ccc;
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fdfdfd;
+  border-radius: 5px;
+}
+
+.chat-box p {
+  margin: 5px 0;
+}
+
+.private-message {
+  color: #b91c1c; /* red for private messages */
+}
+
+.chat-input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.send-button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #4338ca;
+}
+
+.users-container {
+  margin-top: 20px;
+}
+
+.user-list li {
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.user-list li:hover {
+  color: #4f46e5;
+  font-weight: bold;
+}
+
+.selected-user {
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+.typing-indicator {
+  font-style: italic;
+  color: #555;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .chat-input {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .send-button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .input-container {
+    flex-direction: column;
+  }
+}
+
+.read-receipt {
+  font-size: 0.7em;
+  color: #888;
+  margin-left: 5px;
+}
+
+
+.chat-box {
+  border: 1px solid #ccc;
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fdfdfd;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+

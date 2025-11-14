@@ -107,6 +107,16 @@ io.on('connection', (socket) => {
     io.emit('user_list', Object.values(users));
     io.emit('typing_users', Object.values(typingUsers));
   });
+
+  // GET /api/messages?skip=0&limit=20
+app.get('/api/messages', (req, res) => {
+  const skip = parseInt(req.query.skip) || 0;
+  const limit = parseInt(req.query.limit) || 20;
+  const paginatedMessages = messages.slice(-skip - limit, messages.length - skip);
+  res.json(paginatedMessages);
+});
+
+
 });
 
 // API routes
